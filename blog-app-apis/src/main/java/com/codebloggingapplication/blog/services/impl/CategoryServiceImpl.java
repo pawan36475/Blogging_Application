@@ -30,7 +30,7 @@ public class CategoryServiceImpl implements CategoryService {
 		Category addedCat = this.categoryRepo.save(cat);
 		return this.modelMapper.map(addedCat, CategoryDto.class);
 	}
-
+ 
 	@Override
 	public CategoryDto updateCategory(CategoryDto categoryDto, Integer categoryId) {
 		Category cat = this.categoryRepo.findById(categoryId)
