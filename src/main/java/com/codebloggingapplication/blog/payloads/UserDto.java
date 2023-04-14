@@ -10,6 +10,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @NoArgsConstructor
 @Getter
 @Setter
@@ -22,7 +25,8 @@ public class UserDto {
 	@Size(min = 4, message = "Name should atleast contain 4 letters")
 	private String name;
 
-	@Email(message = "Email address is not valid!")
+	@NotEmpty
+	//@Email(message = "Email address is not valid!")
 	private String email;
 
 	@NotEmpty
@@ -32,9 +36,10 @@ public class UserDto {
 	@NotEmpty
 	private String about;
 
-	public Object getEmail() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	private Set<RoleDto> roles=new HashSet<>();
+//	public Object getEmail() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
 
 }

@@ -7,15 +7,17 @@ import java.util.*;
 
 public interface UserService {
 
-	UserDto createUser(UserDto userDto);
+    UserDto registerNewUser(UserDto user);
 
-	UserDto updateUser(UserDto user, Integer userId);
+    UserDto createUser(UserDto userDto);
 
-	UserDto getUserById(Integer userId);
+    UserDto updateUser(UserDto user, Integer userId);
 
-	List<UserDto> getAllUsers();
+    UserDto getUserById(Integer userId);
 
-	void deleteUser(Integer userId);
+    List<UserDto> getAllUsers();
 
-	//UserDto createUser(UserDto user);
+    void deleteUser(Integer userId);
+
+    //UserDto createUser(UserDto user);
 }
